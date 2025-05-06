@@ -18,6 +18,12 @@ h1, h2 ,h3 ,h4, h5, h6 {
     .navbar-tablet {
         display: none;
     }
+    .navbar-mobile {
+        display: none;
+    }
+    .navbar-mobile__icon {
+        display: none;
+    }
 }
 /* laptop */
 @media (max-width: 1199.98px) {
@@ -48,6 +54,9 @@ h1, h2 ,h3 ,h4, h5, h6 {
         width: 33.33%;
         padding: 0 5px;
     }
+    .navbar-mobile__icon {
+        display: none;
+    }
 }
 
 
@@ -62,6 +71,7 @@ h1, h2 ,h3 ,h4, h5, h6 {
         width: 100%;
     }
     .heading--logo {
+        position: relative;
         display: flex;
         flex-direction: column;
     }
@@ -89,17 +99,18 @@ h1, h2 ,h3 ,h4, h5, h6 {
     .box {
         width: 50%;
     }
-
-    .fa-bars {
-        margin-top: 15px;
-        color: var(--text-color);
-        padding: 15px;
-        font-size: 2rem;
-    }
     .navbar-tablet {
         position: relative;
     }
+    .fa-bars {
+        display: inline-block;
+        margin-top: 15px;
+        color: var(--text-color);
+        font-size: 2rem;
+        padding: 10px;
+    }
     .toggle {
+        display: block;
         position: absolute;
         top: 100%;
         left: 0;
@@ -110,7 +121,7 @@ h1, h2 ,h3 ,h4, h5, h6 {
         background-color: black;
         transition: all 0.4s linear;
     }
-    .fa-bars:hover .toggle {
+    .narbar-tablet__css:hover .toggle {
         opacity: 1;
         transform: scale(1);
     }
@@ -166,7 +177,11 @@ h1, h2 ,h3 ,h4, h5, h6 {
     }
     .content-list {
         margin-left: 10%;
+        width: 80%;
+        margin: 0 auto;
     }
+
+
     /* footer */
     .footer {
         display: flex;
@@ -174,6 +189,9 @@ h1, h2 ,h3 ,h4, h5, h6 {
         padding: 50px 5px;
     }
     .navbar-mobile {
+        display: none;
+    }
+    .navbar-mobile__icon {
         display: none;
     }
 }
@@ -185,9 +203,15 @@ h1, h2 ,h3 ,h4, h5, h6 {
     .wrap-header,.wrap-content,.wrap--footer {
         width: 100%;
     }
+    .navbar-mobile__icon {
+        display: block;
+    }
     .item-select {
         flex-wrap: wrap;
         gap: 20px;
+    }
+    .navbar-tablet {
+        display: none;
     }
     .box {
         width: 100%;
@@ -214,9 +238,7 @@ h1, h2 ,h3 ,h4, h5, h6 {
         min-height: 100px;
         height: inherit;
     }
-    .toggle {
-        display: none;
-    }
+
     .navbar-mobile {
         position: fixed;
         display: block;
@@ -237,7 +259,12 @@ h1, h2 ,h3 ,h4, h5, h6 {
         left: 0;
     }
     .navbar-mobile__css li a {
+        font-weight: 200;
         display: block;
         color: var(--text-color);
+    }
+    .header-form {
+        top: 50%;
+        left: -300%;
     }
 }
