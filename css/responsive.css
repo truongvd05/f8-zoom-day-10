@@ -140,12 +140,18 @@ h1, h2 ,h3 ,h4, h5, h6 {
         width: 100%;
         padding: 50px 5px;
     }
+    .navbar-mobile {
+        display: none;
+    }
 }
 @media (min-width: 992px) {
     .fa-bars {
         display: none;
     }
     .toggle {
+        display: none;
+    }
+    .navbar-mobile {
         display: none;
     }
 }
@@ -184,5 +190,31 @@ h1, h2 ,h3 ,h4, h5, h6 {
     .wrap--footer {
         min-height: 100px;
         height: inherit;
+    }
+    .toggle {
+        display: none;
+    }
+    .navbar-mobile {
+        position: fixed;
+        display: block;
+        width: 70%;
+        top: 135px;
+        left: -71%;
+        background-color: black;
+        transition: all 0.4s linear;
+    }
+    .navbar-mobile__css li {
+        display: block;
+        padding: 10px 10px;
+    }
+    .navbar-mobile__css li +li {
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .fa-bars:hover :where(.navbar-mobile){
+        left: 0;
+    }
+    .navbar-mobile__css li a {
+        display: block;
+        color: var(--text-color);
     }
 }
