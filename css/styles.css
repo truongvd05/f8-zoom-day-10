@@ -1,0 +1,425 @@
+:root {
+    --premery-color: #b80257;
+    --text-color: #ffffff;
+}
+* {
+    box-sizing: border-box;
+}
+html {
+    font-size: 62.5%;
+    font-family: "Source Sans 3", sans-serif;
+}
+h1, h2 ,h3 ,h4, h5, h6 {
+    font-family: "PT Sans", sans-serif;
+}
+
+/* start header */
+
+
+.wrap-header {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 100px;
+    background-image: url(https://themazine.com/html/scholars-lms/images/home/banner-10.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.header {
+    height: inherit;
+    background: rgba(0, 0, 0, 0.6);
+}
+.heading {
+    display: flex;
+    width: 1170px;
+    margin: 0 auto;
+    height: inherit;
+    flex-direction: column;
+}
+.heading--main {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+.header--list {
+    display: flex;
+    color: var(--text-color);
+}
+.header--list > li {
+    position: relative;
+    top: 0;
+    left: 0;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+.header--list > li > a {
+    color: var(--text-color);
+    display: block;
+    padding: 10px 25px;
+
+}
+
+/* menu navbar */
+.header--list  li:hover .header--list__nav{
+    opacity: 1;
+    transform: scaleY(1);
+}
+.header--list__nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 220px;
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top center;
+    transition: all 0.3s linear;
+    background-color: var(--text-color);
+}
+.header--list__nav li a {
+    display: block;
+    padding: 15px;
+    transition: all 0.4s linear;
+    color: rgba(0, 0, 0, 0.6);
+}
+.header--list__nav li:hover {
+    background-color: var(--premery-color);
+}
+.header--list__nav li a:hover {
+    color: var(--text-color);
+    transform: translateX(4px);
+}
+
+
+/* end menu navbar */
+
+
+.header-form {
+    position: absolute;
+    display: flex;
+    top: 100%;
+    left: -300%;
+    width: 280px;
+    visibility: hidden;
+    background-color: #ffffff;
+}
+.fas {
+    color: var(--text-color);
+    display: flex;
+    font-size: 1.6rem;
+    padding: 10px;
+}
+.header-icon {
+    position: relative;
+    display: flex;
+}
+i {
+    cursor: pointer;
+}
+.form-checkbox:has([type="checkbox"]:checked) :where(.header-form) {
+    visibility: visible;
+}
+.btn-form {
+    background-color: var(--premery-color);
+    border: none;
+    margin: 5px;
+}
+.header-form__input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.header--contact {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--text-color);
+}
+.header--contact__font {
+    font-weight: 700;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.header--content {
+    display: flex;
+    font-size: 1.6rem;
+    color: var(--text-color);
+}
+.header--content__hover:hover {
+    color: #783df0;
+}
+.header--content__before::before {
+    content: "/";
+    padding: 0 5px;
+}
+.header--content li a {
+    color: inherit;
+}
+
+/* content */
+.wrap-content{
+    width: 1170px;
+    display: flex;
+    margin: 0 auto;
+    gap: 20px;
+    margin-bottom: 100px;
+}
+
+
+/* box left */
+.content-list {
+    margin-bottom: 100px;
+    width: 25%;
+}
+.lish-search {
+    position: relative;
+    height: 45px;
+    margin-bottom: 50px;
+}
+.lish-search__input {
+    width: 100%;
+    height: 100%;    
+    background: #eeeeee;
+    font-style: italic;
+    font-size: 1.5rem;
+    border: none;
+    outline: none;
+    padding: 0 102px 0 10px;
+}
+.lish-search__btn {
+    width: 100px;
+    height: 100%;
+    background-color: var(--premery-color);
+    border: none;
+    color: var(--text-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+}
+.shop-categories__title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+
+/* box right */
+.row {
+    --columns: 3;
+    --spacing: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: var(--spacing);
+    margin-left: calc(-1 * var(--spacing));
+}
+.wrap-box {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+.content-item {
+    width: 75%;
+}
+.item-select {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.categories-list li{
+    font-size: 1.6rem;
+    padding: 7px;
+}
+.categories-list li a {
+    color: rgba(0, 0, 0, 0.6)
+}
+.categories-list li a:hover {
+    color: var(--premery-color);
+}
+.find-item {
+    height: 45px;
+    width: 200px;
+    padding: 5px 10px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.find-item__result {
+    margin: auto 0;
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.8);
+}
+.box {
+    width: 33.333%;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+.box-img {
+    overflow: hidden;
+    display: block;
+}
+.box-img__hover {
+    width: 100%;
+    margin-bottom: 20px;
+    background-size: cover;
+    transition: all 0.4s linear;
+}
+.box-img__hover:hover {
+    transform: scale(1.1);
+}
+.box-info {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    gap: 20px;  
+    margin-bottom: 20px;
+}
+.btn-box {
+    margin: 0 auto; 
+    width: 120px;
+    padding: 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    outline: none;
+    border: none;
+    background-color: var(--premery-color);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: all 0.4s linear;
+}
+.btn-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+.content-pages {
+    display: block;
+    width: 100%;
+    height: 40px;
+    margin-top: 50px;
+}
+.box-pages {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.box-pages__count {
+    padding: 8px 15px;
+    background-color: var(--premery-color);
+    color: var(--text-color);
+    border-radius: 50%;
+    font-size: 1.5rem;
+    transition: all 0.2s linear;
+}
+.box-pages__count:hover {
+    background-color: #783df0;
+}
+
+
+
+
+
+
+
+
+/* footer */
+.wrap--footer {
+    width: 100%;
+    height: 500px;
+    background-color: #151515;
+}
+
+.footer--text__color{
+    color: rgba(143, 161, 161, 1);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4rem;
+    gap: 10px;
+}
+.footer--text__color li a{
+    color: rgba(143, 161, 161, 1);
+    font-size: 1.4rem;
+    transition: all 0.1s linear;
+}
+.footer--text__color li a:hover {
+    color: var(--premery-color);
+}
+.footer--text__color li h1 {
+    font-size: 2rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+.col-md-2 {
+    width: 16.66666667%;
+}
+.footer {
+    padding-top: 50px;
+    width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    gap: 10px;
+}
+.footer--logo {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+.footer--logo__icon {
+    display: flex;
+    gap: 20px;
+}
+.footer--subscribe__color {
+    color: var(--text-color);
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+.footer--input {
+    background-color: #272727;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: rgba(255, 255, 255, 0.6);
+}
+.btn-primery {
+    position: relative;
+    top: 0;
+    left: 0;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 40px;
+    padding: 10px 10px;
+    background-color: var(--premery-color);
+    color: var(--text-color);
+    border-radius: 20px;
+    transition: all 0.4s linear;
+    z-index: 0;
+}
+.btn-primery::after {
+    position: absolute;
+    content: "";
+    inset: 0;
+    transform: scale(0);
+    transform-origin: center;
+    cursor: pointer;
+    border: none;
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    z-index: -1 ;
+    transition: all 0.3s linear;
+    background-color: var(--text-color);
+}
+.btn-primery:hover::after {
+    transform: scale(1);
+}
+.btn-primery:hover  {
+    background-color: var(--text-color);
+    color: var(--premery-color);
+}
