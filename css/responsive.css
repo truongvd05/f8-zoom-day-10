@@ -13,9 +13,42 @@ h1, h2 ,h3 ,h4, h5, h6 {
     font-family: "PT Sans", sans-serif;
 }
 
-
-
-
+/* huge latop */
+@media (min-width: 1200px) {
+    .navbar-tablet {
+        display: none;
+    }
+}
+/* laptop */
+@media (max-width: 1199.98px) {
+    .heading,.wrap-content,.footer {
+        width: 95%;
+    }
+    .fa-bars {
+        display: none;
+    }
+    .toggle {
+        display: none;
+    }
+    .navbar-mobile {
+        display: none;
+    }
+    .header--list > li > a {
+        padding: 10px;
+    }
+    .heading--main {
+        gap: 20px;
+        justify-content: space-between;
+        margin: 0 20px;
+    }
+    .content-list {
+        width: 25%;
+    }
+    .box {
+        width: 33.33%;
+        padding: 0 5px;
+    }
+}
 
 
 
@@ -144,17 +177,7 @@ h1, h2 ,h3 ,h4, h5, h6 {
         display: none;
     }
 }
-@media (min-width: 992px) {
-    .fa-bars {
-        display: none;
-    }
-    .toggle {
-        display: none;
-    }
-    .navbar-mobile {
-        display: none;
-    }
-}
+
 
 
 /* mobile */
