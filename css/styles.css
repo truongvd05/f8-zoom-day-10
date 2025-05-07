@@ -228,12 +228,23 @@ i {
     justify-content: space-between;
     margin-bottom: 50px;
 }
+.categories-list {
+    margin-bottom: 50px;
+}
 .categories-list li{
     font-size: 1.6rem;
     padding: 7px;
+    display: flex;
 }
 .categories-list li a {
-    color: rgba(0, 0, 0, 0.6)
+
+    color: rgba(0, 0, 0, 0.6);
+
+}
+.categories-list__Text {
+    display: block;
+    margin: auto 0;
+    margin-left: 5px;
 }
 .categories-list li a:hover {
     color: var(--premery-color);
