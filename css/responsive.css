@@ -243,7 +243,7 @@ h1, h2 ,h3 ,h4, h5, h6 {
         position: fixed;
         display: block;
         width: 70%;
-        top: 135px;
+        top: 125px;
         left: -71%;
         background-color: black;
         transition: all 0.4s linear;
